@@ -1,32 +1,27 @@
 import { useState } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
+import { motion } from 'motion/react';
 
 const services = [
   {
     title: 'HAIRCUTS & STYLING',
     items: [
-      { name: 'CLASSIC HAIRCUT', price: 'from 50 QAR', desc: 'Expert haircut tailored to your style with a precision finish.' },
-      { name: 'EXECUTIVE HAIRCUT', price: 'from 80 QAR', desc: 'Premium haircut including hot towel and styling products.' },
-      { name: 'BOYS HAIRCUT', price: 'from 30 QAR', desc: 'Cool cuts for the young ones.' },
+      { name: 'CLASSIC HAIRCUT', price: 'from €35', desc: 'Expert haircut tailored to your style with a precision finish.' },
+      { name: 'EXECUTIVE HAIRCUT', price: 'from €50', desc: 'Premium haircut including hot towel and styling products.' },
+      { name: 'BOYS HAIRCUT', price: 'from €25', desc: 'Cool cuts for the young ones.' },
     ]
   },
   {
     title: 'BEARD TREATMENT',
     items: [
-      { name: 'BEARD TRIM', price: 'from 35 QAR', desc: 'Classic beard trim and edge lineup.' },
-      { name: 'HOT TOWEL SHAVE', price: 'from 60 QAR', desc: 'Traditional razor shave experiencing maximum relaxation.' },
+      { name: 'BEARD TRIM', price: 'from €25', desc: 'Classic beard trim and edge lineup.' },
+      { name: 'HOT TOWEL SHAVE', price: 'from €35', desc: 'Traditional razor shave experiencing maximum relaxation.' },
     ]
   },
   {
-    title: 'COLORING SERVICES',
+    title: 'HOUSECALL SERVICES',
     items: [
-      { name: 'HAIR & BEARD COLOR', price: 'from 100 QAR', desc: 'Professional coloring to cover greys or change your look.' },
-    ]
-  },
-  {
-    title: 'FACIAL TREATMENTS',
-    items: [
-      { name: 'CLEANSING FACIAL', price: 'from 70 QAR', desc: 'Deep cleansing and exfoliating facial treatment.' },
+      { name: 'PREMIUM HOUSECALL', price: 'Contact Us', desc: 'Certified hairdresser bringing the barbershop to your location.' },
     ]
   }
 ];
@@ -60,7 +55,7 @@ export default function ServicesAndStory() {
                   {openAccordion === idx && (
                     <div className="p-6 bg-white border-t border-gray-200">
                       <div className="text-sm font-semibold mb-6 flex gap-2 w-full justify-between sm:justify-start sm:gap-4 md:gap-8 border-b pb-4">
-                        <a href="https://wa.me/97433348939" target="_blank" rel="noreferrer" className="text-primary hover:underline uppercase">Make an Appointment</a>
+                        <a href="#" className="text-primary hover:underline uppercase">Make an Appointment</a>
                         <a href="#stylists" className="text-gray-500 hover:text-primary hover:underline uppercase">See our Stylists</a>
                       </div>
                       
@@ -94,27 +89,35 @@ export default function ServicesAndStory() {
             
             <div className="text-gray-600 leading-relaxed space-y-6 text-lg">
               <p>
-                Located in the heart of <strong>Qatar</strong> on Al Manara Street, Doha, Creativity Barbershop is your premier destination for exceptional grooming.
+                Located in <strong>Huissen, Netherlands</strong> at Sabelhof 10. Ba.Cutz is a <span className="font-bold text-primary">Certified Hairdresser 🇳🇱</span> offering an exclusive, tailored grooming experience.
               </p>
               
               <div className="flex gap-4 my-8">
-                <img 
-                  src="https://i.ibb.co/1Y5wHKqG/Screenshot-2026-04-29-165344.png" 
-                  alt="Creativity Barbershop Interior" 
-                  className="w-2/3 object-cover shadow-md"
+                <motion.img 
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  src="https://i.ibb.co/679MPTbk/Screenshot-2026-04-30-153423.png" 
+                  alt="Ba.Cutz Barbershop" 
+                  className="w-2/3 object-cover shadow-md rounded-2xl"
                 />
-                <img 
-                  src="https://i.ibb.co/fVFg8kt3/Screenshot-2026-04-29-165244.png" 
+                <motion.img 
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  src="https://i.ibb.co/Y4Kh7DSX/Screenshot-2026-04-30-153457.png" 
                   alt="Barber tools" 
-                  className="w-1/3 object-cover shadow-md"
+                  className="w-1/3 object-cover shadow-md rounded-2xl"
                 />
               </div>
               
               <p>
-                We are open late from <strong>9 AM to 2 AM</strong> every single day to serve you. You are in trusted hands with our expert stylists and modern equipment. 
+                We specialize in <strong>Housecall Services 📞</strong>, bringing the ultimate premium barbershop directly to your location. Trusted by professional athletes worldwide.
               </p>
               <p>
-                Call us at <strong>+974 3334 8939</strong> to schedule your appointment, or simply walk in and let us transform your look with unparalleled creativity.
+                Book online through Calendly to schedule your appointment, or <a href="https://www.instagram.com/ba.cutzz" target="_blank" rel="noreferrer" className="text-primary hover:underline">contact us directly</a> for special housecall requests in the Netherlands.
               </p>
             </div>
           </div>

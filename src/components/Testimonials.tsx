@@ -1,15 +1,16 @@
 import { Quote, Star } from 'lucide-react';
+import { motion } from 'motion/react';
 
 const testimonials = [
   {
-    name: 'Ahmed K.',
+    name: 'Kevin D.',
     image: 'https://i.pravatar.cc/150?img=11',
-    text: 'Creativity Barbershop is a breath of fresh air in Doha. It is bright, modern, stylish and a wonderful environment top-tier cuts. Open late which is perfect.',
+    text: 'Ba.Cutz is a breath of fresh air. It is bright, modern, stylish and a wonderful environment for top-tier cuts. The housecall service is perfect for my busy schedule.',
   },
   {
-    name: 'Omar S.',
+    name: 'Jeroen M.',
     image: 'https://i.pravatar.cc/150?img=12',
-    text: 'Top-notch service in Qatar. I couldn\'t have been more pleased. I always leave with a fresh fade and feeling completely relaxed.',
+    text: 'Top-notch service in the Netherlands. I couldn\'t have been more pleased. I always leave with a fresh fade and feeling completely relaxed.',
   }
 ];
 
@@ -31,14 +32,21 @@ export default function Testimonials() {
             RATED 4.8 ⭐ <span className="text-xl md:text-2xl opacity-90">(19 REVIEWS)</span>
           </h2>
           <p className="text-white font-medium uppercase tracking-wider mt-2 bg-black/20 px-4 py-2 rounded-full inline-block">
-            USE COUPON CODE: <span className="font-bold">CREATIVITY20</span>
+            USE COUPON CODE: <span className="font-bold">BACUTZ20</span>
           </p>
         </div>
         
         {/* Testimonials */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {testimonials.map((t, i) => (
-            <div key={i} className="bg-white p-8 shadow-sm flex flex-col md:flex-row gap-6 items-center md:items-start relative border-t-4 border-primary">
+            <motion.div 
+              key={i} 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: i * 0.2 }}
+              viewport={{ once: true, margin: "-50px" }}
+              className="bg-white p-8 shadow-xl rounded-2xl flex flex-col md:flex-row gap-6 items-center md:items-start relative border-t-4 border-primary"
+            >
               <img 
                 src={t.image} 
                 alt={t.name}
@@ -53,7 +61,7 @@ export default function Testimonials() {
                   {t.name}
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
         

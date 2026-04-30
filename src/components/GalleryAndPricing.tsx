@@ -1,22 +1,33 @@
+import { motion } from 'motion/react';
+
 const galleryImages = [
-  { url: 'https://i.ibb.co/HpNm6YyT/Screenshot-2026-04-29-165053.png', alt: 'Precision Fade' },
-  { url: 'https://i.ibb.co/2V4FXsn/Screenshot-2026-04-29-165137.png', alt: 'Sharp Edges' },
-  { url: 'https://i.ibb.co/zTyZ1sRT/Screenshot-2026-04-29-165221.png', alt: 'Clean Cut' },
-  { url: 'https://i.ibb.co/fVFg8kt3/Screenshot-2026-04-29-165244.png', alt: 'Classic Pompadour' },
-  { url: 'https://i.ibb.co/35mCpTKS/Screenshot-2026-04-29-164930.png', alt: 'Modern Style' },
-  { url: 'https://i.ibb.co/M5p5zjcq/Screenshot-2026-04-29-165010.png', alt: 'Textured Crop' },
-  { url: 'https://i.ibb.co/kpLHY7P/Screenshot-2026-04-29-165026.png', alt: 'Full Beard Trim' },
-  { url: 'https://i.ibb.co/HpNm6YyT/Screenshot-2026-04-29-165053.png', alt: 'Executive Look' },
+  { url: 'https://i.ibb.co/0Wb275f/Screenshot-2026-04-30-153410.png', alt: 'Housecall Service' },
+  { url: 'https://i.ibb.co/679MPTbk/Screenshot-2026-04-30-153423.png', alt: 'Housecall Service' },
+  { url: 'https://i.ibb.co/Y4Kh7DSX/Screenshot-2026-04-30-153457.png', alt: 'Housecall Service' },
+  { url: 'https://i.ibb.co/yFDNQyrw/Screenshot-2026-04-30-153756.png', alt: 'Brazilië U17' },
+  { url: 'https://i.ibb.co/BX3NCZD/Screenshot-2026-04-30-153835.png', alt: 'Brazilië U17' },
+  { url: 'https://i.ibb.co/0pHwTpBk/Screenshot-2026-04-30-154037.png', alt: 'Oostenrijk U17' },
+  { url: 'https://i.ibb.co/W4gD6hxy/Screenshot-2026-04-30-154054.png', alt: 'Oostenrijk U17' },
+  { url: 'https://i.ibb.co/wFWvLfPH/Screenshot-2026-04-30-154205.png', alt: 'Frankrijk U17' },
+  { url: 'https://i.ibb.co/wFqmVH2S/Screenshot-2026-04-30-154229.png', alt: 'Frankrijk U17' },
+  { url: 'https://i.ibb.co/zTJt3939/Screenshot-2026-04-30-154405.png', alt: 'Duitsland U17' },
+  { url: 'https://i.ibb.co/7fVTXKG/Screenshot-2026-04-30-154415.png', alt: 'Duitsland U17' },
+  { url: 'https://i.ibb.co/B5LCRt80/Screenshot-2026-04-30-154616.png', alt: 'Engeland U17' },
+  { url: 'https://i.ibb.co/35RNr7Lz/Screenshot-2026-04-30-154632.png', alt: 'Engeland U17' },
+  { url: 'https://i.ibb.co/9HPNmM1X/Screenshot-2026-04-30-154734.png', alt: 'Portugal U17' },
+  { url: 'https://i.ibb.co/KjK8Yk6M/Screenshot-2026-04-30-154747.png', alt: 'Portugal U17' },
+  { url: 'https://i.ibb.co/LdkGc9k6/Screenshot-2026-04-30-155004.png', alt: 'België U17' },
+  { url: 'https://i.ibb.co/vSTVD5s/Screenshot-2026-04-30-155018.png', alt: 'België U17' },
 ];
 
 export default function GalleryAndPricing() {
   const prices = [
-    { name: 'Classic Haircut', price: 'from 50 QAR' },
-    { name: 'Executive Haircut', price: 'from 80 QAR' },
-    { name: 'Beard Trim', price: 'from 35 QAR' },
-    { name: 'Hot Towel Shave', price: 'from 60 QAR' },
-    { name: 'Kids Haircut', price: 'from 30 QAR' },
-    { name: 'Complete Package', price: 'from 120 QAR' },
+    { name: 'Classic Haircut', price: 'from €35' },
+    { name: 'Executive Haircut', price: 'from €50' },
+    { name: 'Beard Trim', price: 'from €25' },
+    { name: 'Hot Towel Shave', price: 'from €35' },
+    { name: 'Kids Haircut', price: 'from €25' },
+    { name: 'Housecall Service', price: 'Contact Us' },
   ];
 
   return (
@@ -27,13 +38,20 @@ export default function GalleryAndPricing() {
           {/* Gallery Section */}
           <div className="flex-1">
             <div className="mb-10">
-              <h2 className="text-3xl font-heading text-[#333] mb-4 uppercase">Popular Beard Styles</h2>
+              <h2 className="text-3xl font-heading text-[#333] mb-4 uppercase">Gallery & Professional Work</h2>
               <div className="w-16 h-1 bg-primary"></div>
             </div>
             
-            <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-4 gap-2">
+            <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-4 gap-2 border-[6px] border-white shadow-xl rounded-xl overflow-hidden bg-white">
               {galleryImages.map((img, i) => (
-                <div key={i} className="group relative overflow-hidden cursor-pointer">
+                <motion.div 
+                  key={i} 
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.4, delay: i * 0.05 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  className="group relative overflow-hidden cursor-pointer"
+                >
                   <img 
                     src={img.url}
                     alt={img.alt} 
@@ -44,7 +62,7 @@ export default function GalleryAndPricing() {
                       {img.alt}
                     </span>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
@@ -67,7 +85,7 @@ export default function GalleryAndPricing() {
               </ul>
               
               <div className="mt-8 text-center">
-                <a href="#" className="inline-block border-2 border-primary text-primary hover:bg-primary hover:text-white transition-colors px-6 py-3 font-semibold uppercase text-sm tracking-wider">
+                <a href="#" className="inline-block border-2 border-primary text-primary hover:bg-primary hover:text-white transition-colors rounded-full px-6 py-3 font-semibold uppercase text-sm tracking-wider">
                   View All Prices
                 </a>
               </div>

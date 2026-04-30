@@ -7,11 +7,11 @@ import Testimonials from './components/Testimonials';
 import TeamSection from './components/TeamSection';
 import MapSection from './components/MapSection';
 import Footer from './components/Footer';
-import WhatsAppWidget from './components/WhatsAppWidget';
+import { ParticleTextEffect } from './components/ui/particle-text-effect';
 
 export default function App() {
   return (
-    <div className="min-h-screen font-sans bg-white selection:bg-primary selection:text-white relative">
+    <div className="min-h-screen font-sans bg-white selection:bg-primary selection:text-white">
       <Navbar />
       <Hero />
       <GalleryAndPricing />
@@ -20,8 +20,8 @@ export default function App() {
       <Testimonials />
       <TeamSection />
       <MapSection />
+      <ParticleTextEffect />
       <Footer />
-      <WhatsAppWidget />
     </div>
   );
 }

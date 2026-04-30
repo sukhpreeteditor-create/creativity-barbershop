@@ -6,12 +6,12 @@ export default function MapSection() {
           width="100%" 
           height="100%" 
           id="gmap_canvas" 
-          src="https://maps.google.com/maps?q=Creativity%20Barbershop,%20Al%20Manara%20St,%20Doha,%20Qatar&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+          src="https://maps.google.com/maps?q=Sabelhof%2010,%206852%20TH%20Huissen,%20Netherlands&t=&z=15&ie=UTF8&iwloc=&output=embed" 
           frameBorder="0" 
           scrolling="no" 
           marginHeight={0} 
           marginWidth={0}
-          title="Creativity Barbershop Location in Doha"
+          title="Ba.Cutz Location in Huissen"
         ></iframe>
       </div>
     </section>
