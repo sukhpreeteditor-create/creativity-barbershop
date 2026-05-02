@@ -3,13 +3,13 @@ import { motion } from 'motion/react';
 
 const team = [
   {
-    name: 'Ba.Cutz',
-    role: 'Certified Hairdresser',
-    desc: 'Specializing in precision cuts and premium housecall services across the Netherlands.',
-    email: 'contact@bacutz.com',
-    image: 'https://i.ibb.co/0Wb275f/Screenshot-2026-04-30-153410.png',
-    instagram: 'https://www.instagram.com/ba.cutzz',
-    youtube: 'https://www.youtube.com/@bacutz'
+    name: 'Sam',
+    role: 'Master Barber',
+    desc: 'Specializing in clean fades, sharp lines, and creating a premium grooming experience that boosts your confidence.',
+    email: 'contact@cutchino.com',
+    image: 'https://i.ibb.co/SXCs085P/Chat-GPT-Image-Apr-30-2026-06-26-33-PM.png',
+    tiktok: 'https://www.tiktok.com/@sam_da_barber?_t=ZS-90I4rtWXH0&_r=1',
+    instagram: 'https://www.instagram.com/cutchino_qatar/?utm_source=ig_web_button_share_sheet',
   }
 ];
 
@@ -22,7 +22,7 @@ export default function TeamSection() {
           <div className="text-center mb-16">
             <p className="text-gray-500 uppercase tracking-widest text-sm mb-2 font-semibold">Meet the grooming professional</p>
             <h2 className="text-4xl md:text-5xl font-heading text-[#333] uppercase">Our Stylist</h2>
-            <div className="w-24 h-1 bg-primary mx-auto mt-6"></div>
+            <div className="w-24 h-1 bg-primary mx-auto mt-6 rounded-full"></div>
           </div>
 
           <div className="grid grid-cols-1 max-w-sm mx-auto gap-8">
@@ -55,12 +55,16 @@ export default function TeamSection() {
                   {member.desc}
                 </p>
                 <div className="text-sm text-gray-500 mb-6 text-center">
-                  Email: <a href={`mailto:${member.email}`} className="text-primary hover:underline font-medium break-all">{member.email}</a>
+                  Contact: <a href={`mailto:${member.email}`} className="text-primary hover:underline font-medium break-all">{member.email}</a>
                 </div>
                 
                 <div className="flex gap-3 mt-auto pt-4 border-t border-gray-100 justify-center">
-                  <a href={member.youtube} target="_blank" rel="noreferrer" className="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center text-gray-500 hover:bg-primary hover:text-white transition-colors"><Youtube size={14} /></a>
-                  <a href={member.instagram} target="_blank" rel="noreferrer" className="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center text-gray-500 hover:bg-primary hover:text-white transition-colors"><Instagram size={14} /></a>
+                  <motion.a whileHover={{ scale: 1.1, rotate: 5 }} whileTap={{ scale: 0.9 }} href={member.tiktok} target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-500 hover:bg-primary hover:text-white transition-colors">
+                    <svg viewBox="0 0 24 24" fill="currentColor" height="16" width="16"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
+                  </motion.a>
+                  <motion.a whileHover={{ scale: 1.1, rotate: -5 }} whileTap={{ scale: 0.9 }} href={member.instagram} target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-500 hover:bg-primary hover:text-white transition-colors">
+                    <Instagram size={16} />
+                  </motion.a>
                 </div>
               </motion.div>
             ))}

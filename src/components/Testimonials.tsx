@@ -1,26 +1,41 @@
-import { Quote, Star } from 'lucide-react';
-import { motion } from 'motion/react';
+import { useState } from 'react';
+import { Star } from 'lucide-react';
+import { TestimonialCard } from './ui/testimonial-cards';
 
 const testimonials = [
   {
-    name: 'Kevin D.',
-    image: 'https://i.pravatar.cc/150?img=11',
-    text: 'Ba.Cutz is a breath of fresh air. It is bright, modern, stylish and a wonderful environment for top-tier cuts. The housecall service is perfect for my busy schedule.',
+    author: 'Kevin D.',
+    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=200&h=200',
+    testimonial: 'Very professional barbers and a friendly team. Clean, modern shop with strong customer satisfaction. The premium experience is worth every penny.',
   },
   {
-    name: 'Jeroen M.',
-    image: 'https://i.pravatar.cc/150?img=12',
-    text: 'Top-notch service in the Netherlands. I couldn\'t have been more pleased. I always leave with a fresh fade and feeling completely relaxed.',
+    author: 'Jeroen M.',
+    image: 'https://images.unsplash.com/photo-1599566150163-29194dcaad36?auto=format&fit=crop&q=80&w=200&h=200',
+    testimonial: 'Top-notch service in Doha. I couldn\'t have been more pleased. I always leave with a fresh, high-quality fade and feeling completely relaxed.',
+  },
+  {
+    author: 'Ahmed S.',
+    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200&h=200',
+    testimonial: 'Best barber shop in the city! Clean lines, great atmosphere, and the stylists really know what they are doing. Highly recommended.',
   }
 ];
 
 export default function Testimonials() {
+  const [positions, setPositions] = useState(["front", "middle", "back"]);
+
+  const handleShuffle = () => {
+    const newPositions = [...positions];
+    const first = newPositions.pop();
+    if(first) newPositions.unshift(first);
+    setPositions(newPositions);
+  };
+
   return (
-    <section className="bg-[#f4f4f4] py-24">
+    <section className="bg-[#f4f4f4] py-24 overflow-hidden">
       <div className="container mx-auto px-4 md:px-8">
         
         {/* Banner */}
-        <div className="bg-primary text-center py-10 px-4 shadow-lg mb-20 flex flex-col items-center">
+        <div className="bg-primary text-center py-10 px-4 shadow-lg rounded-[2rem] mb-16 flex flex-col items-center">
           <div className="flex items-center justify-center space-x-2 text-yellow-400 mb-2">
              <Star fill="currentColor" strokeWidth={0} size={28} />
              <Star fill="currentColor" strokeWidth={0} size={28} />
@@ -28,41 +43,33 @@ export default function Testimonials() {
              <Star fill="currentColor" strokeWidth={0} size={28} />
              <Star fill="currentColor" strokeWidth={0} size={28} />
           </div>
-          <h2 className="text-white text-3xl md:text-4xl font-heading tracking-wide mb-2">
-            RATED 4.8 ⭐ <span className="text-xl md:text-2xl opacity-90">(19 REVIEWS)</span>
+          <h2 className="text-white text-3xl md:text-4xl font-heading tracking-wide mb-2 uppercase">
+            Rated 5.0 ⭐ <span className="text-xl md:text-2xl opacity-90">(600+ Reviews)</span>
           </h2>
-          <p className="text-white font-medium uppercase tracking-wider mt-2 bg-black/20 px-4 py-2 rounded-full inline-block">
-            USE COUPON CODE: <span className="font-bold">BACUTZ20</span>
+          <p className="text-white text-sm font-medium uppercase tracking-widest mt-4 bg-black/20 px-6 py-3 rounded-full inline-block">
+            USE COUPON CODE: <span className="font-bold underline underline-offset-4">CUTCHINO20</span>
           </p>
         </div>
         
-        {/* Testimonials */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-          {testimonials.map((t, i) => (
-            <motion.div 
-              key={i} 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: i * 0.2 }}
-              viewport={{ once: true, margin: "-50px" }}
-              className="bg-white p-8 shadow-xl rounded-2xl flex flex-col md:flex-row gap-6 items-center md:items-start relative border-t-4 border-primary"
-            >
-              <img 
-                src={t.image} 
-                alt={t.name}
-                className="w-24 h-24 rounded-full object-cover border-4 border-gray-100 flex-shrink-0"
+        {/* Shuffle Cards Testimonials Stack */}
+        <div className="grid place-content-center">
+          <div className="text-center mb-8">
+             <h3 className="text-3xl font-heading uppercase text-[#333]">What Our Clients Say</h3>
+             <p className="text-gray-500 mt-2 text-sm max-w-sm mx-auto uppercase tracking-wider font-semibold">Swipe to see more reviews</p>
+             <div className="w-16 h-1 bg-primary rounded-full mx-auto mt-4"></div>
+          </div>
+          
+          {/* Centering container for the cards */}
+          <div className="relative h-[450px] w-full max-w-[340px] md:max-w-none md:w-[500px] flex justify-center translate-x-[-10%] md:translate-x-[-20%] isolate touch-none">
+            {testimonials.map((testimonial, index) => (
+              <TestimonialCard
+                key={testimonial.author}
+                {...testimonial}
+                handleShuffle={handleShuffle}
+                position={positions[index]}
               />
-              <div className="text-center md:text-left">
-                <Quote className="text-gray-200 w-10 h-10 mb-2 mx-auto md:mx-0" />
-                <p className="text-gray-600 italic mb-4 leading-relaxed">
-                  "{t.text}"
-                </p>
-                <div className="font-semibold text-gray-800 uppercase tracking-widest text-xs font-sans">
-                  {t.name}
-                </div>
-              </div>
-            </motion.div>
-          ))}
+            ))}
+          </div>
         </div>
         
       </div>

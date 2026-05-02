@@ -131,7 +131,7 @@ interface ParticleTextEffectProps {
   words?: string[]
 }
 
-const DEFAULT_WORDS = ["BA.CUTZ", "HOUSECALLS", "CERTIFIED", "PREMIUM", "HAIRCUTS"]
+const DEFAULT_WORDS = ["CUTCHINO", "PREMIUM", "GROOMING", "DOHA", "QATAR"]
 
 export function ParticleTextEffect({ words = DEFAULT_WORDS }: ParticleTextEffectProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null)
@@ -354,7 +354,7 @@ export function ParticleTextEffect({ words = DEFAULT_WORDS }: ParticleTextEffect
         className="w-full max-w-5xl aspect-[5/2]"
       />
       <div className="mt-8 text-gray-500 text-sm md:text-base text-center max-w-md font-medium tracking-wide uppercase">
-        <p className="mb-2">Ba.Cutz Hair Art</p>
+        <p className="mb-2">Cutchino Men's Salon</p>
         <p className="text-gray-600 text-xs">
           Interactive Canvas • Right-click and drag
         </p>

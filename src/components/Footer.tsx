@@ -1,4 +1,5 @@
 import { Phone, MapPin, Home, Instagram } from 'lucide-react';
+import { motion } from 'motion/react';
 
 export default function Footer() {
   return (
@@ -12,15 +13,15 @@ export default function Footer() {
               Information
             </h3>
             <p className="text-sm leading-relaxed mb-6">
-              Welcome to <span className="font-bold text-white">Ba.Cutz</span>, the top-rated certified hairdresser in Huissen, Netherlands. Housecall services available to bring premium grooming to you.
+              Welcome to <span className="font-bold text-white">Cutchino Men's Salon</span>, the top-rated premium barber brand in Doha, Qatar. Experience clean fades and sharp lines.
             </p>
             <div className="flex gap-4">
-              <a href="https://www.youtube.com/@bacutz" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center hover:border-primary hover:text-primary transition-colors">
-                <svg viewBox="0 0 24 24" fill="currentColor" height="18" width="18"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-              </a>
-              <a href="https://www.instagram.com/ba.cutzz" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center hover:border-primary hover:text-primary transition-colors">
+              <motion.a whileHover={{ scale: 1.1, rotate: 5 }} whileTap={{ scale: 0.9 }} href="https://www.tiktok.com/@sam_da_barber?_t=ZS-90I4rtWXH0&_r=1" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center hover:border-primary hover:text-primary transition-colors">
+                <svg viewBox="0 0 24 24" fill="currentColor" height="18" width="18"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
+              </motion.a>
+              <motion.a whileHover={{ scale: 1.1, rotate: -5 }} whileTap={{ scale: 0.9 }} href="https://www.instagram.com/cutchino_qatar/?utm_source=ig_web_button_share_sheet" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center hover:border-primary hover:text-primary transition-colors">
                 <Instagram size={18} />
-              </a>
+              </motion.a>
             </div>
           </div>
 
@@ -30,14 +31,16 @@ export default function Footer() {
               Our Services
             </h3>
             <div className="flex flex-wrap gap-2">
-              {['fade', 'housecalls', 'styling', 'haircuts', 'netherlands', 'huissen', 'certified', 'grooming'].map((tag, i) => (
-                <a 
+              {['fades', 'highlights', 'styling', 'haircuts', 'doha', 'qatar', 'premium', 'facial'].map((tag, i) => (
+                <motion.a 
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
                   key={i} 
                   href="#" 
                   className={`border border-gray-700 hover:border-primary hover:text-primary transition-colors rounded-full px-3 py-1 text-sm capitalize ${[0,1,5].includes(i) ? 'text-base font-bold text-gray-300' : ''}`}
                 >
                   {tag}
-                </a>
+                </motion.a>
               ))}
             </div>
           </div>
@@ -48,44 +51,41 @@ export default function Footer() {
               Contact Us
             </h3>
             <p className="text-sm leading-relaxed mb-6">
-              Book your next appointment online or request a housecall service.
+              Book your next appointment and experience premium grooming.
             </p>
             <ul className="space-y-4 text-sm">
               <li className="flex items-start gap-3">
                 <MapPin size={16} className="text-primary flex-shrink-0 mt-1" />
                 <span>
-                  <a href="https://maps.app.goo.gl/355r1aR5V3" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">
-                    Sabelhof 10, Huissen 6852TH
-                    <br /> Netherlands
+                  <a href="https://maps.app.goo.gl/mJFqW23Gz4F1PLxb8" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">
+                    Doha, Qatar
                   </a>
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={16} className="text-primary flex-shrink-0" />
-                <span>Housecalls Available 📞</span>
+                <span>+974 5513 7732</span>
               </li>
               <li className="flex items-center gap-3">
                 <Home size={16} className="text-primary flex-shrink-0" />
-                <a href="https://calendly.com/bacutz/ba-cutz-knippen" target="_blank" rel="noreferrer" className="text-white font-bold hover:text-primary transition-colors">Book Online!</a>
+                <a href="#services" className="text-white font-bold hover:text-primary transition-colors">View Services</a>
               </li>
             </ul>
           </div>
 
-          {/* Story Highlights */}
+          {/* Highlights */}
           <div>
             <h3 className="text-white font-heading text-xl uppercase tracking-widest mb-6 pb-2 border-b border-gray-800">
-              Highlights
+              Popular
             </h3>
             <div className="space-y-3 text-sm">
               {[
-                { name: 'Housecalls 📞', val: 'Available' },
-                { name: 'Brazilië U17', val: 'Br' },
-                { name: 'Oostenrijk U17', val: 'At' },
-                { name: 'Frankrijk U17', val: 'Fr' },
-                { name: 'Duitsland U17', val: 'De' },
-                { name: 'Engeland U17', val: 'En' },
-                { name: 'Portugal U17', val: 'Pt' },
-                { name: 'België U17', val: 'Be' },
+                { name: 'Hair Dyeing', val: '600 QAR' },
+                { name: 'L’Oréal X-Tenso', val: '1000 QAR' },
+                { name: 'Highlights', val: '500 QAR' },
+                { name: 'Perm', val: '500 QAR' },
+                { name: 'Hydra Facial', val: '200 QAR' },
+                { name: 'Haircut', val: '70 QAR' },
               ].map(highlight => (
                 <div key={highlight.name} className="flex justify-between border-b border-gray-800 pb-2">
                   <span>{highlight.name}</span><span className="text-white">{highlight.val}</span>
@@ -102,10 +102,10 @@ export default function Footer() {
         <div className="container mx-auto px-4 md:px-8 flex flex-col md:flex-row justify-between items-center text-sm">
           <div className="flex items-center gap-2 mb-4 md:mb-0">
             <span>Trim your hair at</span>
-            <span className="text-white font-heading uppercase tracking-widest text-lg ml-2">Ba.Cutz</span>
+            <span className="text-white font-heading uppercase tracking-widest text-lg ml-2">Cutchino</span>
           </div>
           <div>
-             &copy; {new Date().getFullYear()} Ba.Cutz. All rights reserved.
+             &copy; {new Date().getFullYear()} Cutchino Men's Salon. All rights reserved.
           </div>
         </div>
       </div>

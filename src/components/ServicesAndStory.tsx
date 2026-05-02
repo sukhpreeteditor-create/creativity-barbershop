@@ -1,82 +1,91 @@
-import { useState } from 'react';
-import { ChevronDown, ChevronUp } from 'lucide-react';
 import { motion } from 'motion/react';
+import { LiquidButton } from './ui/liquid-glass-button';
 
 const services = [
   {
-    title: 'HAIRCUTS & STYLING',
+    title: 'HAIR SERVICES',
     items: [
-      { name: 'CLASSIC HAIRCUT', price: 'from €35', desc: 'Expert haircut tailored to your style with a precision finish.' },
-      { name: 'EXECUTIVE HAIRCUT', price: 'from €50', desc: 'Premium haircut including hot towel and styling products.' },
-      { name: 'BOYS HAIRCUT', price: 'from €25', desc: 'Cool cuts for the young ones.' },
+      { name: 'Haircut', price: '70 QAR', desc: '25 min' },
+      { name: 'Hair Styling', price: '30 QAR', desc: '10 min' },
+      { name: 'Hair Dyeing', price: '600 QAR', desc: '2 hrs' },
+      { name: 'Children’s Haircut', price: '50 QAR', desc: '20 min' },
+      { name: 'L’Oréal X-Tenso (Long Hair)', price: '1000 QAR', desc: '1 hr' },
+      { name: 'Hair Coloring', price: '150 QAR', desc: '30 min' },
+      { name: 'L’Oréal X-Tenso (Short Hair)', price: '500 QAR', desc: '1 hr' },
+      { name: 'Brushing Long Hair', price: '50 QAR', desc: '5 min' },
     ]
   },
   {
-    title: 'BEARD TREATMENT',
+    title: 'OTHER SERVICES',
     items: [
-      { name: 'BEARD TRIM', price: 'from €25', desc: 'Classic beard trim and edge lineup.' },
-      { name: 'HOT TOWEL SHAVE', price: 'from €35', desc: 'Traditional razor shave experiencing maximum relaxation.' },
+      { name: 'Beard Coloring', price: '50 QAR', desc: '15 min' },
+      { name: 'Beard Trim', price: '30 QAR', desc: '15 min' },
+      { name: 'Highlights', price: '500 QAR', desc: '2 hrs' },
+      { name: 'Perm', price: '500 QAR', desc: '3 hrs' },
+      { name: 'Oil Treatment', price: '150 QAR', desc: '45 min' },
     ]
   },
   {
-    title: 'HOUSECALL SERVICES',
+    title: 'SPA & WELLNESS',
     items: [
-      { name: 'PREMIUM HOUSECALL', price: 'Contact Us', desc: 'Certified hairdresser bringing the barbershop to your location.' },
+      { name: 'Waxing Medium', price: '20 QAR', desc: '5 min' },
+      { name: 'Light Facial', price: '100 QAR', desc: '30 min' },
+      { name: 'Hydra Facial', price: '200 QAR', desc: '1 hr' },
+      { name: 'Waxing Full Face', price: '50 QAR', desc: '10 min' },
     ]
   }
 ];
 
 export default function ServicesAndStory() {
-  const [openAccordion, setOpenAccordion] = useState<number>(0);
-
   return (
-    <section className="py-20 bg-white">
-      <div className="container mx-auto px-4 md:px-8">
+    <section className="py-20 bg-white" id="services">
+      <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col lg:flex-row gap-16">
           
-          {/* Services Accordion */}
+          {/* Services List */}
           <div className="flex-1">
             <div className="mb-10">
               <h2 className="text-3xl font-heading text-[#333] mb-4 uppercase">Our Services</h2>
-              <div className="w-16 h-1 bg-primary"></div>
+              <div className="w-16 h-1 bg-primary rounded-full"></div>
             </div>
             
-            <div className="space-y-4">
+            <div className="space-y-8">
               {services.map((service, idx) => (
-                <div key={idx} className="border border-gray-200">
-                  <button 
-                    className={`w-full flex justify-between items-center p-4 font-heading text-lg font-medium transition-colors ${openAccordion === idx ? 'bg-primary text-white' : 'bg-gray-50 text-gray-800 hover:text-primary'}`}
-                    onClick={() => setOpenAccordion(openAccordion === idx ? -1 : idx)}
-                  >
-                    {service.title}
-                    {openAccordion === idx ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
-                  </button>
+                <motion.div 
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: idx * 0.1 }}
+                  key={idx} 
+                  className="bg-gray-50 rounded-[2rem] border border-gray-100 overflow-hidden shadow-sm"
+                >
+                  <div className="bg-primary p-6 text-white text-center">
+                    <h3 className="font-heading text-xl font-medium tracking-wide uppercase">{service.title}</h3>
+                  </div>
                   
-                  {openAccordion === idx && (
-                    <div className="p-6 bg-white border-t border-gray-200">
-                      <div className="text-sm font-semibold mb-6 flex gap-2 w-full justify-between sm:justify-start sm:gap-4 md:gap-8 border-b pb-4">
-                        <a href="#" className="text-primary hover:underline uppercase">Make an Appointment</a>
-                        <a href="#stylists" className="text-gray-500 hover:text-primary hover:underline uppercase">See our Stylists</a>
-                      </div>
-                      
-                      <p className="text-gray-500 text-sm mb-6 pb-4 border-b">
-                        Our expert barbers provide premium services designed for maximum comfort and style.
-                      </p>
-                      
-                      <div className="space-y-6">
-                        {service.items.map((item, i) => (
-                          <div key={i}>
-                            <h4 className="font-heading text-lg text-gray-800 tracking-wide">
-                              {item.name} - <span className="text-primary">{item.price}</span>
+                  <div className="p-6 md:p-8">
+                    <div className="space-y-6">
+                      {service.items.map((item, i) => (
+                        <div key={i} className="flex justify-between items-start border-b border-gray-200 pb-4 last:border-0 last:pb-0">
+                          <div>
+                            <h4 className="font-heading text-lg font-medium text-gray-800 tracking-wide">
+                              {item.name}
                             </h4>
-                            <p className="text-gray-600 mt-1">{item.desc}</p>
+                            <p className="text-gray-500 text-sm mt-1">{item.desc}</p>
                           </div>
-                        ))}
-                      </div>
+                          <div className="text-primary font-bold text-lg">{item.price}</div>
+                        </div>
+                      ))}
                     </div>
-                  )}
-                </div>
+                  </div>
+                </motion.div>
               ))}
+            </div>
+            
+            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+               <a href="#" className="relative block">
+                 <LiquidButton size="xl" className="w-full sm:w-auto text-white bg-primary border-none">Make an Appointment</LiquidButton>
+               </a>
             </div>
           </div>
 
@@ -84,41 +93,43 @@ export default function ServicesAndStory() {
           <div className="flex-1">
             <div className="mb-10">
               <h2 className="text-3xl font-heading text-[#333] mb-4 uppercase">Our Story</h2>
-              <div className="w-16 h-1 bg-primary"></div>
+              <div className="w-16 h-1 bg-primary rounded-full"></div>
             </div>
             
             <div className="text-gray-600 leading-relaxed space-y-6 text-lg">
               <p>
-                Located in <strong>Huissen, Netherlands</strong> at Sabelhof 10. Ba.Cutz is a <span className="font-bold text-primary">Certified Hairdresser 🇳🇱</span> offering an exclusive, tailored grooming experience.
+                Located in <strong>Doha, Qatar</strong>. Cutchino Men's Salon is a <span className="font-bold text-primary">Premium Barber Brand</span> offering an exclusive, tailored grooming experience.
               </p>
               
               <div className="flex gap-4 my-8">
                 <motion.img 
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.6 }}
                   viewport={{ once: true, margin: "-50px" }}
-                  src="https://i.ibb.co/679MPTbk/Screenshot-2026-04-30-153423.png" 
-                  alt="Ba.Cutz Barbershop" 
-                  className="w-2/3 object-cover shadow-md rounded-2xl"
+                  src="https://i.ibb.co/R4Qnvk1q/Screenshot-2026-04-30-181546.png" 
+                  alt="Cutchino" 
+                  className="w-2/3 object-cover shadow-lg rounded-[2rem]"
                 />
                 <motion.img 
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.6, delay: 0.2 }}
                   viewport={{ once: true, margin: "-50px" }}
-                  src="https://i.ibb.co/Y4Kh7DSX/Screenshot-2026-04-30-153457.png" 
-                  alt="Barber tools" 
-                  className="w-1/3 object-cover shadow-md rounded-2xl"
+                  src="https://i.ibb.co/DHNqHL3n/Screenshot-2026-04-30-181014.png" 
+                  alt="Premium Fade" 
+                  className="w-1/3 object-cover shadow-lg rounded-[2rem]"
                 />
               </div>
               
               <p>
-                We specialize in <strong>Housecall Services 📞</strong>, bringing the ultimate premium barbershop directly to your location. Trusted by professional athletes worldwide.
+                We focus on confidence & style with clean fades, sharp lines, and a full premium grooming experience.
               </p>
-              <p>
-                Book online through Calendly to schedule your appointment, or <a href="https://www.instagram.com/ba.cutzz" target="_blank" rel="noreferrer" className="text-primary hover:underline">contact us directly</a> for special housecall requests in the Netherlands.
-              </p>
+              <div className="pt-4 flex justify-center lg:justify-start">
+                <a href="#services" className="relative block">
+                   <LiquidButton size="xl" className="text-white bg-primary border-none">Book Your Experience</LiquidButton>
+                </a>
+              </div>
             </div>
           </div>
 
