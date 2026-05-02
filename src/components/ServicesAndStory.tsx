@@ -98,7 +98,7 @@ export default function ServicesAndStory() {
             
             <div className="text-gray-600 leading-relaxed space-y-6 text-lg">
               <p>
-                Located in <strong>Doha, Qatar</strong>. Cutchino Men's Salon is a <span className="font-bold text-primary">Premium Barber Brand</span> offering an exclusive, tailored grooming experience.
+                <strong>Barhoumi Barber</strong> is a <span className="font-bold text-primary">Premium Barber Brand</span> offering an exclusive, tailored grooming experience.
               </p>
               
               <div className="flex gap-4 my-8">
@@ -108,7 +108,7 @@ export default function ServicesAndStory() {
                   transition={{ duration: 0.6 }}
                   viewport={{ once: true, margin: "-50px" }}
                   src="https://i.ibb.co/R4Qnvk1q/Screenshot-2026-04-30-181546.png" 
-                  alt="Cutchino" 
+                  alt="Barhoumi Story" 
                   className="w-2/3 object-cover shadow-lg rounded-[2rem]"
                 />
                 <motion.img 

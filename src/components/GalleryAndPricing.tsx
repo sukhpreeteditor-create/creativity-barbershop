@@ -2,11 +2,12 @@ import { motion } from 'motion/react';
 import { LiquidButton } from './ui/liquid-glass-button';
 
 const galleryImages = [
-  { url: 'https://i.ibb.co/DHNqHL3n/Screenshot-2026-04-30-181014.png', alt: 'Premium Fade' },
-  { url: 'https://i.ibb.co/Gvbk3Y9c/Screenshot-2026-04-30-181256.png', alt: 'Clean Cut' },
-  { url: 'https://i.ibb.co/TqKX650w/Screenshot-2026-04-30-181115.png', alt: 'Sharp Lineup' },
-  { url: 'https://i.ibb.co/WWv1Ffyk/Screenshot-2026-04-30-181458.png', alt: 'Beard Trim' },
-  { url: 'https://i.ibb.co/rfRQFzWr/Screenshot-2026-04-30-181220.png', alt: 'Classic Haircut' },
+  { url: 'https://i.ibb.co/Gv7F36sg/Screenshot-2026-05-02-151115.png', alt: 'Premium Fade' },
+  { url: 'https://i.ibb.co/HDNLSVwv/Screenshot-2026-05-02-151130.png', alt: 'Clean Cut' },
+  { url: 'https://i.ibb.co/PzJ0dkMv/Screenshot-2026-05-02-151157.png', alt: 'Sharp Lineup' },
+  { url: 'https://i.ibb.co/LDVw0YDy/Screenshot-2026-05-02-151233.png', alt: 'Beard Trim' },
+  { url: 'https://i.ibb.co/CKTRDPjW/Screenshot-2026-05-02-151044.png', alt: 'Classic Haircut' },
+  { url: 'https://i.ibb.co/x8Xcg3q4/Screenshot-2026-05-02-151058.png', alt: 'Modern Styling' },
 ];
 
 export default function GalleryAndPricing() {

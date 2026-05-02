@@ -13,13 +13,13 @@ export default function Footer() {
               Information
             </h3>
             <p className="text-sm leading-relaxed mb-6">
-              Welcome to <span className="font-bold text-white">Cutchino Men's Salon</span>, the top-rated premium barber brand in Doha, Qatar. Experience clean fades and sharp lines.
+              Welcome to <span className="font-bold text-white">Barhoumi Barber</span>, the top-rated premium barber brand. Experience clean fades and sharp lines.
             </p>
             <div className="flex gap-4">
-              <motion.a whileHover={{ scale: 1.1, rotate: 5 }} whileTap={{ scale: 0.9 }} href="https://www.tiktok.com/@sam_da_barber?_t=ZS-90I4rtWXH0&_r=1" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center hover:border-primary hover:text-primary transition-colors">
-                <svg viewBox="0 0 24 24" fill="currentColor" height="18" width="18"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
+              <motion.a whileHover={{ scale: 1.1, rotate: 5 }} whileTap={{ scale: 0.9 }} href="https://www.threads.net/@barhoumi.tarek.56" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center hover:border-primary hover:text-primary transition-colors">
+                <svg viewBox="0 0 24 24" fill="currentColor" height="16" width="16"><path d="M14.939 12.352c-.179.623-.538 1.127-1.077 1.512-.538.384-1.127.576-1.767.576s-1.229-.192-1.767-.576c-.538-.385-.898-.889-1.077-1.512h5.688zM24 12c0 6.627-5.373 12-12 12S0 18.627 0 12 5.373 0 12 0s12 5.373 12 12zm-3 0c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9 9-4.03 9-9zM8.905 12h-2.14c.264-1.119.866-2.025 1.808-2.716C9.516 8.592 10.669 8.247 12 8.247s2.484.346 3.427 1.037c.942.69 1.544 1.597 1.808 2.716h-2.14c-.179-.623-.538-1.127-1.077-1.512-.538-.384-1.127-.576-1.767-.576s-1.229.192-1.767.576c-.538.385-.898.889-1.077 1.512z"/></svg>
               </motion.a>
-              <motion.a whileHover={{ scale: 1.1, rotate: -5 }} whileTap={{ scale: 0.9 }} href="https://www.instagram.com/cutchino_qatar/?utm_source=ig_web_button_share_sheet" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center hover:border-primary hover:text-primary transition-colors">
+              <motion.a whileHover={{ scale: 1.1, rotate: -5 }} whileTap={{ scale: 0.9 }} href="https://www.instagram.com/barhoumi.tarek.56?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center hover:border-primary hover:text-primary transition-colors">
                 <Instagram size={18} />
               </motion.a>
             </div>
@@ -31,7 +31,7 @@ export default function Footer() {
               Our Services
             </h3>
             <div className="flex flex-wrap gap-2">
-              {['fades', 'highlights', 'styling', 'haircuts', 'doha', 'qatar', 'premium', 'facial'].map((tag, i) => (
+              {['fades', 'highlights', 'styling', 'haircuts', 'premium', 'facial'].map((tag, i) => (
                 <motion.a 
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -57,8 +57,8 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin size={16} className="text-primary flex-shrink-0 mt-1" />
                 <span>
-                  <a href="https://maps.app.goo.gl/mJFqW23Gz4F1PLxb8" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">
-                    Doha, Qatar
+                  <a href="#" className="hover:text-white transition-colors">
+                    Find us on Instagram
                   </a>
                 </span>
               </li>
@@ -102,10 +102,10 @@ export default function Footer() {
         <div className="container mx-auto px-4 md:px-8 flex flex-col md:flex-row justify-between items-center text-sm">
           <div className="flex items-center gap-2 mb-4 md:mb-0">
             <span>Trim your hair at</span>
-            <span className="text-white font-heading uppercase tracking-widest text-lg ml-2">Cutchino</span>
+            <span className="text-white font-heading uppercase tracking-widest text-lg ml-2">Barhoumi</span>
           </div>
           <div>
-             &copy; {new Date().getFullYear()} Cutchino Men's Salon. All rights reserved.
+             &copy; {new Date().getFullYear()} Barhoumi Barber. All rights reserved.
           </div>
         </div>
       </div>

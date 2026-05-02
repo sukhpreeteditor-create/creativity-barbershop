@@ -27,15 +27,15 @@ export default function Navbar() {
           <div className="flex items-center space-x-2 flex-1 saturate-150">
             <MapPin size={14} className="text-white" />
             <a href="https://maps.app.goo.gl/mJFqW23Gz4F1PLxb8" target="_blank" rel="noreferrer" className="font-medium tracking-wide hover:text-white/80 transition-colors">
-              Doha, Qatar
+              Barhoumi Barber
             </a>
           </div>
         </div>
         <div className="flex space-x-4">
-          <a href="https://www.tiktok.com/@sam_da_barber?_t=ZS-90I4rtWXH0&_r=1" target="_blank" rel="noreferrer" className="hover:text-white/80 transition-colors flex items-center gap-1 font-medium tracking-wide">
-            <svg viewBox="0 0 24 24" fill="currentColor" height="14" width="14"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg> TikTok
+          <a href="https://www.threads.net/@barhoumi.tarek.56" target="_blank" rel="noreferrer" className="hover:text-white/80 transition-colors flex items-center gap-1 font-medium tracking-wide">
+            <svg viewBox="0 0 24 24" fill="currentColor" height="14" width="14"><path d="M14.939 12.352c-.179.623-.538 1.127-1.077 1.512-.538.384-1.127.576-1.767.576s-1.229-.192-1.767-.576c-.538-.385-.898-.889-1.077-1.512h5.688zM24 12c0 6.627-5.373 12-12 12S0 18.627 0 12 5.373 0 12 0s12 5.373 12 12zm-3 0c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9 9-4.03 9-9zM8.905 12h-2.14c.264-1.119.866-2.025 1.808-2.716C9.516 8.592 10.669 8.247 12 8.247s2.484.346 3.427 1.037c.942.69 1.544 1.597 1.808 2.716h-2.14c-.179-.623-.538-1.127-1.077-1.512-.538-.384-1.127-.576-1.767-.576s-1.229.192-1.767.576c-.538.385-.898.889-1.077 1.512z"/></svg> Threads
           </a>
-          <a href="https://www.instagram.com/cutchino_qatar/?utm_source=ig_web_button_share_sheet" target="_blank" rel="noreferrer" className="hover:text-white/80 transition-colors flex items-center gap-1 font-medium tracking-wide">
+          <a href="https://www.instagram.com/barhoumi.tarek.56?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noreferrer" className="hover:text-white/80 transition-colors flex items-center gap-1 font-medium tracking-wide">
             <Instagram size={14} /> Instagram
           </a>
         </div>
@@ -50,11 +50,11 @@ export default function Navbar() {
         }`}
       >
         <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
-          <a href="#" className="flex-shrink-0 flex items-center">
+          <a href="#" className={`flex-shrink-0 flex items-center rounded-full overflow-hidden bg-white shadow-[0_4px_16px_rgba(0,0,0,0.1)] transition-all duration-500 ${isScrolled ? 'h-10 md:h-12 w-10 md:w-12' : 'h-12 md:h-16 w-12 md:w-16'}`}>
             <img 
-              src="https://i.ibb.co/WNjSyGkN/Chat-GPT-Image-Apr-30-2026-06-20-23-PM.png" 
-              alt="Cutchino Logo" 
-              className={`rounded-full object-cover aspect-square bg-white transition-all duration-500 shadow-[0_4px_16px_rgba(0,0,0,0.1)] ${isScrolled ? 'h-10 md:h-12' : 'h-12 md:h-16'}`}
+              src="https://i.ibb.co/8GzRP3j/Screenshot-2026-05-02-151628.png" 
+              alt="Barhoumi Logo" 
+              className="object-cover w-full h-full scale-[1.35]"
             />
           </a>
 

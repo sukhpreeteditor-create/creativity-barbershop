@@ -11,7 +11,7 @@ const testimonials = [
   {
     author: 'Jeroen M.',
     image: 'https://images.unsplash.com/photo-1599566150163-29194dcaad36?auto=format&fit=crop&q=80&w=200&h=200',
-    testimonial: 'Top-notch service in Doha. I couldn\'t have been more pleased. I always leave with a fresh, high-quality fade and feeling completely relaxed.',
+    testimonial: 'Top-notch service! I couldn\'t have been more pleased. I always leave with a fresh, high-quality fade and feeling completely relaxed.',
   },
   {
     author: 'Ahmed S.',
@@ -47,7 +47,7 @@ export default function Testimonials() {
             Rated 5.0 ⭐ <span className="text-xl md:text-2xl opacity-90">(600+ Reviews)</span>
           </h2>
           <p className="text-white text-sm font-medium uppercase tracking-widest mt-4 bg-black/20 px-6 py-3 rounded-full inline-block">
-            USE COUPON CODE: <span className="font-bold underline underline-offset-4">CUTCHINO20</span>
+            USE COUPON CODE: <span className="font-bold underline underline-offset-4">BARHOUMI20</span>
           </p>
         </div>
         
