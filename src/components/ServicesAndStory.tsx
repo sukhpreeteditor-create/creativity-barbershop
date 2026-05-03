@@ -5,22 +5,22 @@ const services = [
   {
     title: 'HAIR SERVICES',
     items: [
-      { name: 'Hair & Beard', price: '£20', desc: 'Premium grooming' },
-      { name: 'Hair', price: '£15', desc: 'Clean fade or cut' },
+      { name: 'Hair & Beard', price: '₹200', desc: 'Premium grooming' },
+      { name: 'Hair', price: '₹150', desc: 'Clean fade or cut' },
     ]
   },
   {
     title: 'GROOMING',
     items: [
-      { name: 'Shave / Beard Trim', price: '£10', desc: 'Sharp lines' },
-      { name: 'Hot Towel', price: '£7', desc: 'Relaxing finish' },
+      { name: 'Shave / Beard Trim', price: '₹100', desc: 'Sharp lines' },
+      { name: 'Hot Towel', price: '₹70', desc: 'Relaxing finish' },
     ]
   },
   {
     title: 'SPA & WELLNESS',
     items: [
-      { name: 'Full Facial', price: '£10', desc: 'Deep clean' },
-      { name: 'Wax / Black Mask', price: '£5', desc: 'Revitalizing treatment' },
+      { name: 'Full Facial', price: '₹100', desc: 'Deep clean' },
+      { name: 'Wax / Black Mask', price: '₹50', desc: 'Revitalizing treatment' },
     ]
   }
 ];
@@ -87,7 +87,7 @@ export default function ServicesAndStory() {
             
             <div className="text-gray-300 leading-relaxed space-y-6 text-lg">
               <p>
-                <strong>AALZBLENDZ</strong> is <span className="font-bold text-primary">Brums Best Barbers 💈</span> offering an exclusive, tailored grooming experience.
+                <strong>Airoli Aaji</strong> is a <span className="font-bold text-primary">Premium Barber</span> offering an exclusive, tailored grooming experience.
               </p>
               
               <div className="flex gap-4 my-8">
@@ -96,8 +96,8 @@ export default function ServicesAndStory() {
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.6 }}
                   viewport={{ once: true, margin: "-50px" }}
-                  src="https://i.ibb.co/5h1qQM27/Screenshot-2026-05-02-180650.png" 
-                  alt="AALZBLENDZ Story" 
+                  src="https://i.ibb.co/MDXVmp1G/Screenshot-2026-05-03-131131.png" 
+                  alt="Airoli Aaji Story" 
                   className="w-2/3 object-cover shadow-lg rounded-[2rem]"
                 />
                 <motion.img 
@@ -105,7 +105,7 @@ export default function ServicesAndStory() {
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.6, delay: 0.2 }}
                   viewport={{ once: true, margin: "-50px" }}
-                  src="https://i.ibb.co/5gjFLSkD/Screenshot-2026-05-02-180735.png"  
+                  src="https://i.ibb.co/Df0T7dT2/Screenshot-2026-05-03-131153.png"  
                   alt="Premium Fade" 
                   className="w-1/3 object-cover shadow-lg rounded-[2rem]"
                 />

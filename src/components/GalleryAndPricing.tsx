@@ -2,22 +2,22 @@ import { motion } from 'motion/react';
 import { LiquidButton } from './ui/liquid-glass-button';
 
 const galleryImages = [
-  { url: 'https://i.ibb.co/5h1qQM27/Screenshot-2026-05-02-180650.png', alt: 'Premium Fade' },
-  { url: 'https://i.ibb.co/zhCddYfm/Screenshot-2026-05-02-180708.png', alt: 'Clean Cut' },
-  { url: 'https://i.ibb.co/5gjFLSkD/Screenshot-2026-05-02-180735.png', alt: 'Sharp Lineup' },
-  { url: 'https://i.ibb.co/S48yHfCt/Screenshot-2026-05-02-180829.png', alt: 'Beard Trim' },
-  { url: 'https://i.ibb.co/NdXgFFtD/Screenshot-2026-05-02-180905.png', alt: 'Classic Haircut' },
-  { url: 'https://i.ibb.co/NfR4Fp2/Screenshot-2026-05-02-181012.png', alt: 'Modern Styling' },
+  { url: 'https://i.ibb.co/MDXVmp1G/Screenshot-2026-05-03-131131.png', alt: 'Premium Fade' },
+  { url: 'https://i.ibb.co/Df0T7dT2/Screenshot-2026-05-03-131153.png', alt: 'Clean Cut' },
+  { url: 'https://i.ibb.co/pB48JVrr/Screenshot-2026-05-03-131207.png', alt: 'Sharp Lineup' },
+  { url: 'https://i.ibb.co/HTmXfwT4/Screenshot-2026-05-03-131234.png', alt: 'Beard Trim' },
+  { url: 'https://i.ibb.co/YBkXPSzz/Screenshot-2026-05-03-131259.png', alt: 'Classic Haircut' },
+  { url: 'https://i.ibb.co/tM4ZTKQy/Screenshot-2026-05-03-131059.png', alt: 'Modern Styling' },
 ];
 
 export default function GalleryAndPricing() {
   const prices = [
-    { name: 'Hair & Beard', price: '£20' },
-    { name: 'Hair', price: '£15' },
-    { name: 'Shave / Beard Trim', price: '£10' },
-    { name: 'Full Facial', price: '£10' },
-    { name: 'Hot Towel', price: '£7' },
-    { name: 'Wax / Black Mask', price: '£5' },
+    { name: 'Hair & Beard', price: '₹200' },
+    { name: 'Hair', price: '₹150' },
+    { name: 'Shave / Beard Trim', price: '₹100' },
+    { name: 'Full Facial', price: '₹100' },
+    { name: 'Hot Towel', price: '₹70' },
+    { name: 'Wax / Black Mask', price: '₹50' },
   ];
 
   return (

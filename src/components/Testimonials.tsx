@@ -4,17 +4,17 @@ import { TestimonialCard } from './ui/testimonial-cards';
 
 const testimonials = [
   {
-    author: 'Kevin D.',
+    author: 'Sanjay K.',
     image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=200&h=200',
     testimonial: 'Very professional barbers and a friendly team. Clean, modern shop with strong customer satisfaction. The premium experience is worth every penny.',
   },
   {
-    author: 'Jeroen M.',
+    author: 'Amit Patel',
     image: 'https://images.unsplash.com/photo-1599566150163-29194dcaad36?auto=format&fit=crop&q=80&w=200&h=200',
     testimonial: 'Top-notch service! I couldn\'t have been more pleased. I always leave with a fresh, high-quality fade and feeling completely relaxed.',
   },
   {
-    author: 'Ahmed S.',
+    author: 'Rahul Sharma',
     image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200&h=200',
     testimonial: 'Best barber shop in the city! Clean lines, great atmosphere, and the stylists really know what they are doing. Highly recommended.',
   }
@@ -47,7 +47,7 @@ export default function Testimonials() {
             Rated 5.0 ⭐ <span className="text-xl md:text-2xl opacity-90">(600+ Reviews)</span>
           </h2>
           <p className="text-white text-sm font-medium uppercase tracking-widest mt-4 bg-black/20 px-6 py-3 rounded-full inline-block">
-            USE COUPON CODE: <span className="font-bold underline underline-offset-4">BARHOUMI20</span>
+            USE COUPON CODE: <span className="font-bold underline underline-offset-4">AIROLI20</span>
           </p>
         </div>
         

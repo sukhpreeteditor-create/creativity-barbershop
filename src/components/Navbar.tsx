@@ -20,22 +20,15 @@ export default function Navbar() {
       {/* Top Bar - Apple Style frosted glass */}
       <div className="hidden lg:flex justify-between items-center bg-black/20 backdrop-blur-2xl text-gray-200 text-xs py-2 px-8 border-b border-white/10 relative z-50">
         <div className="flex space-x-6">
-          <div className="flex items-center space-x-2 saturate-150">
-            <Phone size={14} className="text-white" />
-            <span className="font-medium tracking-wide">07858324247</span>
-          </div>
           <div className="flex items-center space-x-2 flex-1 saturate-150">
             <MapPin size={14} className="text-white" />
-            <a href="https://maps.app.goo.gl/maps/birmingham" target="_blank" rel="noreferrer" className="font-medium tracking-wide hover:text-white/80 transition-colors">
-              AALZBLENDZ
+            <a href="https://maps.app.goo.gl/2jC1RB7EXZnf7dG99" target="_blank" rel="noreferrer" className="font-medium tracking-wide hover:text-white/80 transition-colors">
+              Airoli Aaji
             </a>
           </div>
         </div>
         <div className="flex space-x-4">
-          <a href="https://www.tiktok.com/@aalzblendz" target="_blank" rel="noreferrer" className="hover:text-white/80 transition-colors flex items-center gap-1 font-medium tracking-wide">
-            <svg viewBox="0 0 24 24" fill="currentColor" height="14" width="14"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 15.68l.01.2a6.33 6.33 0 0011.66 2.66 6.35 6.35 0 001.07-3.56V8.16c1.65.65 3.36 1.08 5.25 1.15V5.88a7.07 7.07 0 01-3.4-1.19z"/></svg> TikTok
-          </a>
-          <a href="https://www.instagram.com/aalzblendz?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noreferrer" className="hover:text-white/80 transition-colors flex items-center gap-1 font-medium tracking-wide">
+          <a href="https://www.instagram.com/sam.the_b?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noreferrer" className="hover:text-white/80 transition-colors flex items-center gap-1 font-medium tracking-wide">
             <Instagram size={14} /> Instagram
           </a>
         </div>
@@ -52,8 +45,8 @@ export default function Navbar() {
         <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
           <a href="#" className={`flex-shrink-0 flex items-center rounded-full overflow-hidden bg-transparent shadow-[0_4px_16px_rgba(0,0,0,0.1)] transition-all duration-500 ${isScrolled ? 'h-10 md:h-12 w-10 md:w-12' : 'h-12 md:h-16 w-12 md:w-16'}`}>
             <img 
-              src="https://i.ibb.co/chXBhNcf/Screenshot-2026-05-02-181131.png" 
-              alt="AAlzblendz Logo" 
+              src="https://i.ibb.co/VpLwL1JL/Screenshot-2026-05-03-131005.png" 
+              alt="Airoli Aaji Logo" 
               className="object-cover w-full h-full scale-[1.35]"
             />
           </a>
@@ -65,11 +58,6 @@ export default function Navbar() {
             <a href="#" className="text-white hover:text-white/70 text-sm font-medium tracking-wide transition-colors">Gallery</a>
             <a href="#stylists" className="text-white hover:text-white/70 text-sm font-medium tracking-wide transition-colors">Stylist</a>
             <a href="#map" className="text-white hover:text-white/70 text-sm font-medium tracking-wide transition-colors">Location</a>
-            <a href="#services" className="relative group">
-              <LiquidButton variant="primary" className="text-white" size="sm">
-                 Book Now
-              </LiquidButton>
-            </a>
           </nav>
 
           {/* Mobile Menu Toggle */}
@@ -96,11 +84,6 @@ export default function Navbar() {
               <a href="#" className="font-medium text-sm hover:bg-white/5 rounded-xl px-4 py-3 transition-colors">Gallery</a>
               <a href="#stylists" className="font-medium text-sm hover:bg-white/5 rounded-xl px-4 py-3 transition-colors">Stylist</a>
               <a href="#map" className="font-medium text-sm hover:bg-white/5 rounded-xl px-4 py-3 transition-colors">Location</a>
-              <div className="pt-2 pb-1">
-                 <LiquidButton variant="primary" className="w-full text-white" size="lg">
-                   Book Now
-                 </LiquidButton>
-              </div>
             </motion.div>
           )}
         </AnimatePresence>

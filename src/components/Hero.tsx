@@ -5,10 +5,10 @@ export default function Hero() {
   return (
     <ScrollExpandMedia
       mediaType="image"
-      mediaSrc="https://i.ibb.co/zhCddYfm/Screenshot-2026-05-02-180708.png"
-      bgImageSrc="https://i.ibb.co/zhCddYfm/Screenshot-2026-05-02-180708.png"
-      title="AALZBLENDZ Brums_Best Barbers"
-      date="Book appointments via DM ⬇️"
+      mediaSrc="https://i.ibb.co/4w1RWQTx/Screenshot-2026-05-03-172419.png"
+      bgImageSrc="https://i.ibb.co/4w1RWQTx/Screenshot-2026-05-03-172419.png"
+      title="Airoli Aaji"
+      date="Premium Grooming Experience"
       scrollToExpand="Scroll to Expand"
       textBlend={false}
     >

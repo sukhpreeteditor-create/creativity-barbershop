@@ -3,13 +3,12 @@ import { motion } from 'motion/react';
 
 const team = [
   {
-    name: 'Aalzblendz',
+    name: 'Airoli Aaji',
     role: 'Master Barber',
-    desc: 'Brums Best Barbers 💈. Make sure to leave a review ⭐⭐⭐⭐⭐',
-    email: 'contact@aalzblendz.com',
-    image: 'https://i.ibb.co/chXBhNcf/Screenshot-2026-05-02-181131.png',
-    threads: 'https://www.tiktok.com/@aalzblendz',
-    instagram: 'https://www.tiktok.com/@aalzblendz',
+    desc: 'Premium cuts and fresh fades. Let the results speak for themselves.',
+    email: 'contact@samthebarber.com',
+    image: 'https://i.ibb.co/VpLwL1JL/Screenshot-2026-05-03-131005.png',
+    instagram: 'https://www.instagram.com/sam.the_b?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==',
   }
 ];
 
@@ -59,9 +58,6 @@ export default function TeamSection() {
                 </div>
                 
                 <div className="flex gap-3 mt-auto pt-4 border-t border-white/10 justify-center">
-                  <motion.a whileHover={{ scale: 1.1, rotate: 5 }} whileTap={{ scale: 0.9 }} href={member.threads} target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-[#1a1a1f] flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white transition-colors">
-                    <svg viewBox="0 0 24 24" fill="currentColor" height="16" width="16"><path d="M14.939 12.352c-.179.623-.538 1.127-1.077 1.512-.538.384-1.127.576-1.767.576s-1.229-.192-1.767-.576c-.538-.385-.898-.889-1.077-1.512h5.688zM24 12c0 6.627-5.373 12-12 12S0 18.627 0 12 5.373 0 12 0s12 5.373 12 12zm-3 0c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9 9-4.03 9-9zM8.905 12h-2.14c.264-1.119.866-2.025 1.808-2.716C9.516 8.592 10.669 8.247 12 8.247s2.484.346 3.427 1.037c.942.69 1.544 1.597 1.808 2.716h-2.14c-.179-.623-.538-1.127-1.077-1.512-.538-.384-1.127-.576-1.767-.576s-1.229.192-1.767.576c-.538.385-.898.889-1.077 1.512z"/></svg>
-                  </motion.a>
                   <motion.a whileHover={{ scale: 1.1, rotate: -5 }} whileTap={{ scale: 0.9 }} href={member.instagram} target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-[#1a1a1f] flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white transition-colors">
                     <Instagram size={16} />
                   </motion.a>
