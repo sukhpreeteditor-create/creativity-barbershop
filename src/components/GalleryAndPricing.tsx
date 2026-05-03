@@ -2,33 +2,33 @@ import { motion } from 'motion/react';
 import { LiquidButton } from './ui/liquid-glass-button';
 
 const galleryImages = [
-  { url: 'https://i.ibb.co/Gv7F36sg/Screenshot-2026-05-02-151115.png', alt: 'Premium Fade' },
-  { url: 'https://i.ibb.co/HDNLSVwv/Screenshot-2026-05-02-151130.png', alt: 'Clean Cut' },
-  { url: 'https://i.ibb.co/PzJ0dkMv/Screenshot-2026-05-02-151157.png', alt: 'Sharp Lineup' },
-  { url: 'https://i.ibb.co/LDVw0YDy/Screenshot-2026-05-02-151233.png', alt: 'Beard Trim' },
-  { url: 'https://i.ibb.co/CKTRDPjW/Screenshot-2026-05-02-151044.png', alt: 'Classic Haircut' },
-  { url: 'https://i.ibb.co/x8Xcg3q4/Screenshot-2026-05-02-151058.png', alt: 'Modern Styling' },
+  { url: 'https://i.ibb.co/5h1qQM27/Screenshot-2026-05-02-180650.png', alt: 'Premium Fade' },
+  { url: 'https://i.ibb.co/zhCddYfm/Screenshot-2026-05-02-180708.png', alt: 'Clean Cut' },
+  { url: 'https://i.ibb.co/5gjFLSkD/Screenshot-2026-05-02-180735.png', alt: 'Sharp Lineup' },
+  { url: 'https://i.ibb.co/S48yHfCt/Screenshot-2026-05-02-180829.png', alt: 'Beard Trim' },
+  { url: 'https://i.ibb.co/NdXgFFtD/Screenshot-2026-05-02-180905.png', alt: 'Classic Haircut' },
+  { url: 'https://i.ibb.co/NfR4Fp2/Screenshot-2026-05-02-181012.png', alt: 'Modern Styling' },
 ];
 
 export default function GalleryAndPricing() {
   const prices = [
-    { name: 'Haircut', price: '70 QAR' },
-    { name: 'Hair Dyeing', price: '600 QAR' },
-    { name: 'L’Oréal X-Tenso', price: '1000 QAR' },
-    { name: 'Highlights', price: '500 QAR' },
-    { name: 'Perm', price: '500 QAR' },
-    { name: 'Hydra Facial', price: '200 QAR' },
+    { name: 'Hair & Beard', price: '£20' },
+    { name: 'Hair', price: '£15' },
+    { name: 'Shave / Beard Trim', price: '£10' },
+    { name: 'Full Facial', price: '£10' },
+    { name: 'Hot Towel', price: '£7' },
+    { name: 'Wax / Black Mask', price: '£5' },
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-[#0f0f11]">
       <div className="container mx-auto px-4 md:px-8">
         <div className="flex flex-col lg:flex-row gap-16">
           
           {/* Gallery Section */}
           <div className="flex-1">
             <div className="mb-10">
-              <h2 className="text-3xl font-heading text-[#333] mb-4 uppercase">Gallery & Professional Work</h2>
+              <h2 className="text-3xl font-heading text-white mb-4 uppercase">Gallery & Professional Work</h2>
               <div className="w-16 h-1 bg-primary rounded-full"></div>
             </div>
             
@@ -60,15 +60,15 @@ export default function GalleryAndPricing() {
           {/* Pricing Section */}
           <div className="flex-1 lg:max-w-md">
             <div className="mb-10">
-              <h2 className="text-3xl font-heading text-[#333] mb-4 uppercase">Check Our Top Prices</h2>
+              <h2 className="text-3xl font-heading text-white mb-4 uppercase">Check Our Top Prices</h2>
               <div className="w-16 h-1 bg-primary rounded-full"></div>
             </div>
             
-            <div className="bg-[#f9f9f9] border border-gray-200 p-8 shadow-lg rounded-[2rem]">
+            <div className="bg-[#151518] border border-white/10 p-8 shadow-[0_0_30px_rgba(157,78,221,0.15)] rounded-[2rem]">
               <ul className="space-y-6">
                 {prices.map((item, i) => (
-                  <li key={i} className="flex justify-between items-center border-b border-gray-200 pb-4 last:border-0 last:pb-0">
-                    <span className="font-semibold text-[#333] text-lg font-sans">{item.name}</span>
+                  <li key={i} className="flex justify-between items-center border-b border-white/10 pb-4 last:border-0 last:pb-0">
+                    <span className="font-semibold text-white text-lg font-sans">{item.name}</span>
                     <span className="text-primary font-bold text-xl">{item.price}</span>
                   </li>
                 ))}
@@ -76,7 +76,7 @@ export default function GalleryAndPricing() {
               
               <div className="mt-8 text-center flex justify-center">
                 <a href="#services" className="relative group block">
-                <LiquidButton size="xl" variant="default" className="text-primary border border-primary/20 bg-white">
+                <LiquidButton size="xl" variant="primary" className="text-white">
                   VIEW ALL PRICES
                 </LiquidButton>
                 </a>

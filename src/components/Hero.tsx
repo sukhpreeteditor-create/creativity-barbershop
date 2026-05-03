@@ -5,16 +5,16 @@ export default function Hero() {
   return (
     <ScrollExpandMedia
       mediaType="image"
-      mediaSrc="https://i.ibb.co/Y4Kh7DSX/Screenshot-2026-04-30-153457.png"
-      bgImageSrc="https://i.ibb.co/Y4Kh7DSX/Screenshot-2026-04-30-153457.png"
-      title="Barhoumi Barber Salon"
-      date="Premium Grooming Experience"
+      mediaSrc="https://i.ibb.co/zhCddYfm/Screenshot-2026-05-02-180708.png"
+      bgImageSrc="https://i.ibb.co/zhCddYfm/Screenshot-2026-05-02-180708.png"
+      title="AALZBLENDZ Brums_Best Barbers"
+      date="Book appointments via DM ⬇️"
       scrollToExpand="Scroll to Expand"
       textBlend={false}
     >
       <div className="flex justify-center mt-[-60px] md:mt-[-80px] mb-16 relative z-30">
         <a href="#services" className="relative group block">
-          <LiquidButton size="xxl" className="text-white bg-primary border-none text-sm md:text-base font-semibold tracking-[2px] uppercase shadow-[0_0_20px_rgba(255,255,255,0.2)]">
+          <LiquidButton variant="primary" size="xxl" className="text-white text-sm md:text-base font-semibold tracking-[2px] uppercase">
             Book An Appointment
           </LiquidButton>
         </a>

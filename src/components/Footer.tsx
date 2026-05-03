@@ -3,7 +3,7 @@ import { motion } from 'motion/react';
 
 export default function Footer() {
   return (
-    <footer className="bg-[#1b1b1b] text-gray-400">
+    <footer className="bg-[#0b0b0e] text-gray-400">
       <div className="container mx-auto px-4 md:px-8 py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           
@@ -13,13 +13,13 @@ export default function Footer() {
               Information
             </h3>
             <p className="text-sm leading-relaxed mb-6">
-              Welcome to <span className="font-bold text-white">Barhoumi Barber</span>, the top-rated premium barber brand. Experience clean fades and sharp lines.
+              Welcome to <span className="font-bold text-white">AALZBLENDZ</span> | Brums Best Barbers 💈. Book appointments via DM ⬇️ Make sure to leave a review ⭐⭐⭐⭐⭐
             </p>
             <div className="flex gap-4">
-              <motion.a whileHover={{ scale: 1.1, rotate: 5 }} whileTap={{ scale: 0.9 }} href="https://www.threads.net/@barhoumi.tarek.56" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center hover:border-primary hover:text-primary transition-colors">
-                <svg viewBox="0 0 24 24" fill="currentColor" height="16" width="16"><path d="M14.939 12.352c-.179.623-.538 1.127-1.077 1.512-.538.384-1.127.576-1.767.576s-1.229-.192-1.767-.576c-.538-.385-.898-.889-1.077-1.512h5.688zM24 12c0 6.627-5.373 12-12 12S0 18.627 0 12 5.373 0 12 0s12 5.373 12 12zm-3 0c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9 9-4.03 9-9zM8.905 12h-2.14c.264-1.119.866-2.025 1.808-2.716C9.516 8.592 10.669 8.247 12 8.247s2.484.346 3.427 1.037c.942.69 1.544 1.597 1.808 2.716h-2.14c-.179-.623-.538-1.127-1.077-1.512-.538-.384-1.127-.576-1.767-.576s-1.229.192-1.767.576c-.538.385-.898.889-1.077 1.512z"/></svg>
+              <motion.a whileHover={{ scale: 1.1, rotate: -5 }} whileTap={{ scale: 0.9 }} href="https://www.tiktok.com/@aalzblendz" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center hover:border-primary hover:text-primary transition-colors">
+                <svg viewBox="0 0 24 24" fill="currentColor" height="18" width="18"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 15.68l.01.2a6.33 6.33 0 0011.66 2.66 6.35 6.35 0 001.07-3.56V8.16c1.65.65 3.36 1.08 5.25 1.15V5.88a7.07 7.07 0 01-3.4-1.19z"/></svg>
               </motion.a>
-              <motion.a whileHover={{ scale: 1.1, rotate: -5 }} whileTap={{ scale: 0.9 }} href="https://www.instagram.com/barhoumi.tarek.56?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center hover:border-primary hover:text-primary transition-colors">
+              <motion.a whileHover={{ scale: 1.1, rotate: -5 }} whileTap={{ scale: 0.9 }} href="https://www.instagram.com/aalzblendz?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center hover:border-primary hover:text-primary transition-colors">
                 <Instagram size={18} />
               </motion.a>
             </div>
@@ -28,10 +28,11 @@ export default function Footer() {
           {/* Tags Widget */}
           <div>
             <h3 className="text-white font-heading text-xl uppercase tracking-widest mb-6 pb-2 border-b border-gray-800">
-              Our Services
+              Payments
             </h3>
-            <div className="flex flex-wrap gap-2">
-              {['fades', 'highlights', 'styling', 'haircuts', 'premium', 'facial'].map((tag, i) => (
+            <p className="text-white">Cash & Bank Transfer only</p>
+            <div className="flex flex-wrap gap-2 mt-4">
+              {['hair', 'beard', 'shave', 'hot towel', 'facial', 'wax'].map((tag, i) => (
                 <motion.a 
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -51,20 +52,20 @@ export default function Footer() {
               Contact Us
             </h3>
             <p className="text-sm leading-relaxed mb-6">
-              Book your next appointment and experience premium grooming.
+              Contact today for bookings.
             </p>
             <ul className="space-y-4 text-sm">
               <li className="flex items-start gap-3">
                 <MapPin size={16} className="text-primary flex-shrink-0 mt-1" />
                 <span>
                   <a href="#" className="hover:text-white transition-colors">
-                    Find us on Instagram
+                    117b Pottery Road, Birmingham,<br/> United Kingdom B689HE
                   </a>
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={16} className="text-primary flex-shrink-0" />
-                <span>+974 5513 7732</span>
+                <span>07858324247</span>
               </li>
               <li className="flex items-center gap-3">
                 <Home size={16} className="text-primary flex-shrink-0" />
@@ -80,12 +81,12 @@ export default function Footer() {
             </h3>
             <div className="space-y-3 text-sm">
               {[
-                { name: 'Hair Dyeing', val: '600 QAR' },
-                { name: 'L’Oréal X-Tenso', val: '1000 QAR' },
-                { name: 'Highlights', val: '500 QAR' },
-                { name: 'Perm', val: '500 QAR' },
-                { name: 'Hydra Facial', val: '200 QAR' },
-                { name: 'Haircut', val: '70 QAR' },
+                { name: 'Hair & Beard', val: '£20' },
+                { name: 'Hair', val: '£15' },
+                { name: 'Shave / Beard Trim', val: '£10' },
+                { name: 'Full Facial', val: '£10' },
+                { name: 'Hot Towel', val: '£7' },
+                { name: 'Wax / Black Mask', val: '£5' },
               ].map(highlight => (
                 <div key={highlight.name} className="flex justify-between border-b border-gray-800 pb-2">
                   <span>{highlight.name}</span><span className="text-white">{highlight.val}</span>
@@ -98,14 +99,14 @@ export default function Footer() {
       </div>
       
       {/* Lower Footer */}
-      <div className="bg-[#141414] py-8 border-t border-black">
+      <div className="bg-[#050508] py-8 border-t border-white/5">
         <div className="container mx-auto px-4 md:px-8 flex flex-col md:flex-row justify-between items-center text-sm">
           <div className="flex items-center gap-2 mb-4 md:mb-0">
             <span>Trim your hair at</span>
-            <span className="text-white font-heading uppercase tracking-widest text-lg ml-2">Barhoumi</span>
+            <span className="text-white font-heading uppercase tracking-widest text-lg ml-2">AALZBLENDZ</span>
           </div>
           <div>
-             &copy; {new Date().getFullYear()} Barhoumi Barber. All rights reserved.
+             &copy; {new Date().getFullYear()} AALZBLENDZ. All rights reserved.
           </div>
         </div>
       </div>

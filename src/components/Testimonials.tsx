@@ -31,11 +31,11 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="bg-[#f4f4f4] py-24 overflow-hidden">
+    <section className="bg-[#0b0b0e] py-24 overflow-hidden">
       <div className="container mx-auto px-4 md:px-8">
         
         {/* Banner */}
-        <div className="bg-primary text-center py-10 px-4 shadow-lg rounded-[2rem] mb-16 flex flex-col items-center">
+        <div className="bg-gradient-to-r from-primary to-primary-hover text-center py-10 px-4 shadow-[0_0_40px_rgba(157,78,221,0.2)] rounded-[2rem] mb-16 flex flex-col items-center">
           <div className="flex items-center justify-center space-x-2 text-yellow-400 mb-2">
              <Star fill="currentColor" strokeWidth={0} size={28} />
              <Star fill="currentColor" strokeWidth={0} size={28} />
@@ -54,8 +54,8 @@ export default function Testimonials() {
         {/* Shuffle Cards Testimonials Stack */}
         <div className="grid place-content-center">
           <div className="text-center mb-8">
-             <h3 className="text-3xl font-heading uppercase text-[#333]">What Our Clients Say</h3>
-             <p className="text-gray-500 mt-2 text-sm max-w-sm mx-auto uppercase tracking-wider font-semibold">Swipe to see more reviews</p>
+             <h3 className="text-3xl font-heading uppercase text-white">What Our Clients Say</h3>
+             <p className="text-gray-400 mt-2 text-sm max-w-sm mx-auto uppercase tracking-wider font-semibold">Swipe to see more reviews</p>
              <div className="w-16 h-1 bg-primary rounded-full mx-auto mt-4"></div>
           </div>
           

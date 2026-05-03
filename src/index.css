@@ -2,16 +2,16 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #538167;
-  --color-primary-hover: #406852;
+  --color-primary: #9d4edd;
+  --color-primary-hover: #7b2cbf;
   --font-sans: "Raleway", sans-serif;
   --font-heading: "Oswald", sans-serif;
   --font-serif: "Playfair Display", serif;
 }
 
 body {
-  background-color: #ffffff;
-  color: #333333;
+  background-color: #0f0f11;
+  color: #e4e4e7;
 }
 
 h1, h2, h3, h4, h5, h6 {

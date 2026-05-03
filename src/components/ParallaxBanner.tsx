@@ -1,13 +1,13 @@
 import { motion } from 'motion/react';
 
 const hours = [
-  { day: 'MON', time: '10 AM - 11 PM', bg: 'bg-[#5b8068]' },
-  { day: 'TUE', time: '10 AM - 11 PM', bg: 'bg-[#5b8068]' },
-  { day: 'WED', time: '10 AM - 10 PM', bg: 'bg-[#5b8068]' },
-  { day: 'THU', time: '10 AM - 11 PM', bg: 'bg-[#5b8068]' },
-  { day: 'FRI', time: '12:30 PM - 11 PM', bg: 'bg-[#5b8068]' },
-  { day: 'SAT', time: '10 AM - 11 PM', bg: 'bg-[#5b8068]' },
-  { day: 'SUN', time: '10 AM - 11 PM', bg: 'bg-[#5b8068]' },
+  { day: 'MON', time: '10 AM - 11 PM', bg: 'bg-gradient-to-br from-primary/80 to-primary-hover shadow-[0_0_20px_rgba(157,78,221,0.2)] border border-primary/20' },
+  { day: 'TUE', time: '10 AM - 11 PM', bg: 'bg-gradient-to-br from-primary/80 to-primary-hover shadow-[0_0_20px_rgba(157,78,221,0.2)] border border-primary/20' },
+  { day: 'WED', time: '10 AM - 10 PM', bg: 'bg-gradient-to-br from-primary/80 to-primary-hover shadow-[0_0_20px_rgba(157,78,221,0.2)] border border-primary/20' },
+  { day: 'THU', time: '10 AM - 11 PM', bg: 'bg-gradient-to-br from-primary/80 to-primary-hover shadow-[0_0_20px_rgba(157,78,221,0.2)] border border-primary/20' },
+  { day: 'FRI', time: '12:30 PM - 11 PM', bg: 'bg-gradient-to-br from-primary/80 to-primary-hover shadow-[0_0_20px_rgba(157,78,221,0.2)] border border-primary/20' },
+  { day: 'SAT', time: '10 AM - 11 PM', bg: 'bg-gradient-to-br from-primary/80 to-primary-hover shadow-[0_0_20px_rgba(157,78,221,0.2)] border border-primary/20' },
+  { day: 'SUN', time: '10 AM - 11 PM', bg: 'bg-gradient-to-br from-primary/80 to-primary-hover shadow-[0_0_20px_rgba(157,78,221,0.2)] border border-primary/20' },
 ];
 
 export default function ParallaxBanner() {

@@ -22,20 +22,20 @@ export default function Navbar() {
         <div className="flex space-x-6">
           <div className="flex items-center space-x-2 saturate-150">
             <Phone size={14} className="text-white" />
-            <span className="font-medium tracking-wide">+974 5513 7732</span>
+            <span className="font-medium tracking-wide">07858324247</span>
           </div>
           <div className="flex items-center space-x-2 flex-1 saturate-150">
             <MapPin size={14} className="text-white" />
-            <a href="https://maps.app.goo.gl/mJFqW23Gz4F1PLxb8" target="_blank" rel="noreferrer" className="font-medium tracking-wide hover:text-white/80 transition-colors">
-              Barhoumi Barber
+            <a href="https://maps.app.goo.gl/maps/birmingham" target="_blank" rel="noreferrer" className="font-medium tracking-wide hover:text-white/80 transition-colors">
+              AALZBLENDZ
             </a>
           </div>
         </div>
         <div className="flex space-x-4">
-          <a href="https://www.threads.net/@barhoumi.tarek.56" target="_blank" rel="noreferrer" className="hover:text-white/80 transition-colors flex items-center gap-1 font-medium tracking-wide">
-            <svg viewBox="0 0 24 24" fill="currentColor" height="14" width="14"><path d="M14.939 12.352c-.179.623-.538 1.127-1.077 1.512-.538.384-1.127.576-1.767.576s-1.229-.192-1.767-.576c-.538-.385-.898-.889-1.077-1.512h5.688zM24 12c0 6.627-5.373 12-12 12S0 18.627 0 12 5.373 0 12 0s12 5.373 12 12zm-3 0c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9 9-4.03 9-9zM8.905 12h-2.14c.264-1.119.866-2.025 1.808-2.716C9.516 8.592 10.669 8.247 12 8.247s2.484.346 3.427 1.037c.942.69 1.544 1.597 1.808 2.716h-2.14c-.179-.623-.538-1.127-1.077-1.512-.538-.384-1.127-.576-1.767-.576s-1.229.192-1.767.576c-.538.385-.898.889-1.077 1.512z"/></svg> Threads
+          <a href="https://www.tiktok.com/@aalzblendz" target="_blank" rel="noreferrer" className="hover:text-white/80 transition-colors flex items-center gap-1 font-medium tracking-wide">
+            <svg viewBox="0 0 24 24" fill="currentColor" height="14" width="14"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 15.68l.01.2a6.33 6.33 0 0011.66 2.66 6.35 6.35 0 001.07-3.56V8.16c1.65.65 3.36 1.08 5.25 1.15V5.88a7.07 7.07 0 01-3.4-1.19z"/></svg> TikTok
           </a>
-          <a href="https://www.instagram.com/barhoumi.tarek.56?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noreferrer" className="hover:text-white/80 transition-colors flex items-center gap-1 font-medium tracking-wide">
+          <a href="https://www.instagram.com/aalzblendz?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noreferrer" className="hover:text-white/80 transition-colors flex items-center gap-1 font-medium tracking-wide">
             <Instagram size={14} /> Instagram
           </a>
         </div>
@@ -50,10 +50,10 @@ export default function Navbar() {
         }`}
       >
         <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
-          <a href="#" className={`flex-shrink-0 flex items-center rounded-full overflow-hidden bg-white shadow-[0_4px_16px_rgba(0,0,0,0.1)] transition-all duration-500 ${isScrolled ? 'h-10 md:h-12 w-10 md:w-12' : 'h-12 md:h-16 w-12 md:w-16'}`}>
+          <a href="#" className={`flex-shrink-0 flex items-center rounded-full overflow-hidden bg-transparent shadow-[0_4px_16px_rgba(0,0,0,0.1)] transition-all duration-500 ${isScrolled ? 'h-10 md:h-12 w-10 md:w-12' : 'h-12 md:h-16 w-12 md:w-16'}`}>
             <img 
-              src="https://i.ibb.co/8GzRP3j/Screenshot-2026-05-02-151628.png" 
-              alt="Barhoumi Logo" 
+              src="https://i.ibb.co/chXBhNcf/Screenshot-2026-05-02-181131.png" 
+              alt="AAlzblendz Logo" 
               className="object-cover w-full h-full scale-[1.35]"
             />
           </a>
@@ -66,7 +66,7 @@ export default function Navbar() {
             <a href="#stylists" className="text-white hover:text-white/70 text-sm font-medium tracking-wide transition-colors">Stylist</a>
             <a href="#map" className="text-white hover:text-white/70 text-sm font-medium tracking-wide transition-colors">Location</a>
             <a href="#services" className="relative group">
-              <LiquidButton className="text-white bg-primary border-none" size="sm">
+              <LiquidButton variant="primary" className="text-white" size="sm">
                  Book Now
               </LiquidButton>
             </a>
@@ -89,15 +89,15 @@ export default function Navbar() {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: -10, scale: 0.95 }}
               transition={{ duration: 0.2, ease: "easeOut" }}
-              className="lg:hidden absolute top-[calc(100%+0.5rem)] left-0 w-full bg-white/70 backdrop-blur-3xl text-black shadow-2xl border border-white/50 flex flex-col py-4 px-6 space-y-2 rounded-3xl mt-4 max-h-[80vh] overflow-y-auto"
+              className="lg:hidden absolute top-[calc(100%+0.5rem)] left-0 w-full bg-[#0b0b0e]/90 backdrop-blur-3xl text-white shadow-[0_10px_40px_rgba(157,78,221,0.15)] border border-white/10 flex flex-col py-4 px-6 space-y-2 rounded-3xl mt-4 max-h-[80vh] overflow-y-auto"
             >
-              <a href="#" className="font-medium text-sm hover:bg-black/5 rounded-xl px-4 py-3 transition-colors">Home</a>
-              <a href="#services" className="font-medium text-sm hover:bg-black/5 rounded-xl px-4 py-3 transition-colors">Services</a>
-              <a href="#" className="font-medium text-sm hover:bg-black/5 rounded-xl px-4 py-3 transition-colors">Gallery</a>
-              <a href="#stylists" className="font-medium text-sm hover:bg-black/5 rounded-xl px-4 py-3 transition-colors">Stylist</a>
-              <a href="#map" className="font-medium text-sm hover:bg-black/5 rounded-xl px-4 py-3 transition-colors">Location</a>
+              <a href="#" className="font-medium text-sm hover:bg-white/5 rounded-xl px-4 py-3 transition-colors">Home</a>
+              <a href="#services" className="font-medium text-sm hover:bg-white/5 rounded-xl px-4 py-3 transition-colors">Services</a>
+              <a href="#" className="font-medium text-sm hover:bg-white/5 rounded-xl px-4 py-3 transition-colors">Gallery</a>
+              <a href="#stylists" className="font-medium text-sm hover:bg-white/5 rounded-xl px-4 py-3 transition-colors">Stylist</a>
+              <a href="#map" className="font-medium text-sm hover:bg-white/5 rounded-xl px-4 py-3 transition-colors">Location</a>
               <div className="pt-2 pb-1">
-                 <LiquidButton className="w-full text-white bg-primary border-none" size="lg">
+                 <LiquidButton variant="primary" className="w-full text-white" size="lg">
                    Book Now
                  </LiquidButton>
               </div>
